@@ -16,4 +16,4 @@ jobs:
         cd "folder with spaces"
         echo $(pwd)
         ls -l /usr/local/bin/docker*
-        docker -v
+        docker run --rm -v $(pwd):/home -w /home m365pnp/powershell pwsh Get-Module -ListAvailable
