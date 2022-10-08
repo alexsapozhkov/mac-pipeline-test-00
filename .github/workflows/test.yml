@@ -8,8 +8,7 @@ jobs:
   test:
     runs-on: macos-12
     steps:
-    - name: Installing Docker
-      run: brew install docker colima
+    - uses: docker-practice/actions-setup-docker@master
     - name: Testing folders with spaces
       run: |
         mkdir "folder with spaces"
