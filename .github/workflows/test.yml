@@ -9,9 +9,7 @@ jobs:
     runs-on: macos-12
     steps:
     - name: Installing Docker
-      run: |
-        brew install --cask docker
-        docker -v
+      run: brew install --cask docker
     - name: Testing folders with spaces
       run: |
         mkdir "folder with spaces"
