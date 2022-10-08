@@ -15,4 +15,5 @@ jobs:
         mkdir "folder with spaces"
         cd "folder with spaces"
         echo $(pwd)
+        ls -l /usr/local/bin/docker*
         docker -v
