@@ -13,4 +13,5 @@ jobs:
         mkdir "folder with spaces"
         cd "folder with spaces"
         echo $(pwd)
+        brew install --cask docker
         docker -v
