@@ -12,4 +12,4 @@ jobs:
     - name: Testing folders with spaces
       run: |
         echo $(pwd)
-        docker run --rm -v $(pwd):/home -w /home m365pnp/powershell pwsh Get-Module -ListAvailable
+        docker run --rm -v $(pwd):/home -w /home m365pnp/powershell pwsh -Command "Get-Module -ListAvailable"
