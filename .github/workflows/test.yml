@@ -11,5 +11,7 @@ jobs:
     - uses: docker-practice/actions-setup-docker@master
     - name: Testing folders with spaces
       run: |
+        mkdir "Folder with spaces"
+        cd "Folder with spaces"
         echo $(pwd)
-        docker run --rm -v $(pwd):/home -w /home m365pnp/powershell pwsh -Command "Get-Module -ListAvailable"
+        docker run --rm -v "$(pwd):/home" -w /home m365pnp/powershell pwsh -Command "Get-Module -ListAvailable"
